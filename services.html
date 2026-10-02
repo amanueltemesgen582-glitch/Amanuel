@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanuel Temesgen</title>
+    <link rel="stylesheet" href="autocycle.css">
+    <link rel="shortcut icon" href="logo2.gif" type="image/jpg">
+</head>
+<body>
+    <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff; /* Clean pure white background */
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    /* Section Container with Requested 100px Margin Top */
+    .services-section {
+      margin-top: 100px;
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Section Header */
+    .services-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .services-header h2 {
+      font-size: 2.8rem;
+      color: #000000; /* Elegant deep blue to match your top navigation bar */
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .services-header p {
+      font-size: 1.1rem;
+      color: #666666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Grid Layout */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    /* Modern Minimalist Cards */
+    .service-card {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      border: 1px solid #eef2f7;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* Soft premium shadow drop */
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    /* Smooth Hover Transitions */
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #00A8FF; /* Sky blue border on hover */
+      box-shadow: 0 20px 40px rgba(0, 168, 255, 0.15); /* Glowing sky blue shadow */
+    }
+
+    /* Card Details */
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      color: #1a365d;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .service-card p {
+      color: #555555;
+      font-size: 0.98rem;
+      margin-bottom: 30px;
+      flex-grow: 1; /* Pushes badges & buttons straight to the card floor */
+    }
+
+    /* Skills & Software Tags Container */
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+      align-items: center;
+    }
+
+    /* General Badge Layout */
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    /* Styled Micro-Logos for Creative Software */
+    .adobe-logo {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      line-height: 18px;
+      text-align: center;
+      border-radius: 4px;
+      font-family: 'Consolas', monospace;
+      font-size: 0.75rem;
+      font-weight: 900;
+      color: #ffffff;
+    }
+    
+    .logo-ps { background-color: #001e36; border: 1px solid #00c8ff; color: #00c8ff; }
+    .logo-ai { background-color: #261300; border: 1px solid #ff9a00; color: #ff9a00; }
+    .logo-id { background-color: #2b0018; border: 1px solid #ff1493; color: #ff1493; }
+    .logo-ae { background-color: #120026; border: 1px solid #d394ff; color: #d394ff; }
+    .logo-pr { background-color: #15002b; border: 1px solid #ea77ff; color: #ea77ff; }
+
+    /* Web Development Tech Logotypes */
+    .web-logo {
+      font-weight: 800;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+    }
+    .logo-html { color: #e34c26; }
+    .logo-css { color: #264de4; }
+    .logo-js { background-color: #f7df1e; color: #000000; padding: 0 4px; border-radius: 2px; font-size: 0.75rem; font-weight: 900; }
+
+    /* Call To Action Buttons (Sky Blue) */
+    .service-btn {
+      display: inline-block;
+      text-align: center;
+      background-color: #00A8FF; /* Sky blue matching your logo */
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .service-btn:hover {
+      background-color: #008cd4; /* Darker sky blue accent when hovered */
+    }
+
+    /* Click Active State */
+    .service-btn:active {
+      background-color: #0073b0; /* Even deeper blue when clicked */
+    }
+
+    /* Mobile Responsive Tweak */
+    @media (max-width: 768px) {
+      .services-header h2 {
+        font-size: 2.2rem;
+      }
+      .services-section {
+        margin-top: 60px; /* Adjusted smaller top spacing for mobile layouts */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="services-section">
+    <div class="services-header">
+      <h2>My Services</h2>
+      <p>This are my services that give you the best experience of your work,with 30%off.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Card 1: Graphic Design -->
+      <div class="service-card">
+        <div class="card-icon"><img src="_3D Graphic Designer Setup with Adobe Tools _ Creative Life Aesthetic_.jpg" alt="Graphic Design" width="87" height="87"></div>
+        <h3>Graphic Design</h3>
+        <p>Making personal and business logos,banners,and promotional business cards.</p>
+        <div class="tech-badges">
+          <div class="tech-badge"><span class="adobe-logo logo-ps">Ps</span> Photoshop</div>
+          <div class="tech-badge"><span class="adobe-logo logo-ai">Ai</span> Illustrator</div>
+          <div class="tech-badge"><span class="adobe-logo logo-id">Id</span> InDesign</div>
+        </div>
+        <a href="#contact" class="service-btn">Get In Touch</a>
+      </div>
+
+      <!-- Card 2: Motion Graphics -->
+      <div class="service-card">
+        <div class="card-icon"><img src="Camara Video Icon.jpg" alt="Graphic Design" width="87" height="87"></div>
+        <h3>Motion & Video</h3>
+        <p>Making a world class edit with Adobe Premiere Pro and After Effects for personal and business uses.</p>
+        <div class="tech-badges">
+          <div class="tech-badge"><span class="adobe-logo logo-ae">Ae</span> After Effects</div>
+          <div class="tech-badge"><span class="adobe-logo logo-pr">Pr</span> Premiere Pro</div>
+          <div class="tech-badge"><span class="adobe-logo logo-ps">Ps</span> Photoshop</div>
+        </div>
+        <a href="#contact" class="service-btn">Start Project</a>
+      </div>
+
+      <!-- Card 3: Web Programming -->
+      <div class="service-card">
+        <div class="card-icon"><img src="download.jpg" alt="Graphic Design" width="87" height="87"></div>
+        <h3>Web Programming</h3>
+        <p>Creating a responsive, modern and user-friendly websites with clean color and composition design.</p>
+        <div class="tech-badges">
+          <div class="tech-badge"><span class="web-logo logo-html">&lt;&gt;</span> HTML</div>
+          <div class="tech-badge"><span class="web-logo logo-css">#</span> CSS</div>
+          <div class="tech-badge"><span class="web-logo logo-js">JS</span> JavaScript</div>
+        </div>
+        <a href="#contact" class="service-btn">Build Website</a>
+      </div>
+    </div>
+  </section>
+    <header class="navbar-header">
+        <a href="#home" class="brand-logo">
+            <span class="logo-icon"><img src="logo2.gif"
+            alt="logo"
+            width="50"
+            height="50"></span> Amanuel Temesgen
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanuel Temesgen</title>
+    <title>Amanuel Temesgen</title>
+    <link rel="stylesheet" href="autocycle.css">
+    <link rel="shortcut icon" href="logo2.gif" type="image/jpg">
+
+    <!-- Keep your existing stylesheet -->
+    <link rel="stylesheet" href="autocycle.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* =========================
+           ABOUT / MY WORK PAGE
+           ========================= */
+
+        #about-page {
+            background: #f8fafc;
+            padding: 145px 7% 70px;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading .tag {
+            display: inline-block;
+            padding: 7px 15px;
+            border-radius: 8px;
+            background: #e8f5fc;
+            color: #35aee2;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2.1rem, 5vw, 3.2rem);
+            color: #111827;
+        }
+
+        .section-heading h1 span {
+            color: #35aee2;
+        }
+
+        .section-heading p {
+            max-width: 680px;
+            margin: auto;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* ABOUT INTRO */
+        .about-intro {
+            display: grid;
+            grid-template-columns: 330px 1fr;
+            gap: 35px;
+            align-items: center;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 32px;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, .07);
+            margin-bottom: 35px;
+        }
+
+        .about-photo {
+            width: 100%;
+            max-height: 390px;
+            object-fit: contain;
+            display: block;
+            border-radius: 20px;
+        }
+
+        .about-content h2 {
+            margin: 0 0 15px;
+            color: #173c70;
+            font-size: 1.8rem;
+        }
+
+        .about-content p {
+            color: #64748b;
+            line-height: 1.8;
+            margin: 0 0 15px;
+        }
+
+        .quick-info {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 22px;
+        }
+
+        .info-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 13px;
+            padding: 14px;
+        }
+
+        .info-box i {
+            color: #35aee2;
+            margin-right: 7px;
+        }
+
+        .info-box strong {
+            color: #1e293b;
+            font-size: .9rem;
+        }
+
+        .info-box span {
+            display: block;
+            color: #64748b;
+            margin-top: 4px;
+            font-size: .88rem;
+        }
+
+        /* COMMON CARD */
+        .section-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 22px;
+            padding: 32px;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, .06);
+            margin-bottom: 35px;
+        }
+
+        .section-card h2 {
+            margin: 0 0 9px;
+            color: #173c70;
+            font-size: 1.65rem;
+        }
+
+        .section-card > p {
+            margin: 0 0 25px;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* EXPERIENCE */
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background: #cfeaf6;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 0 0 25px 18px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -28px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            background: #35aee2;
+            border: 4px solid #e8f5fc;
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            margin: 0 0 5px;
+            color: #1e293b;
+            font-size: 1.05rem;
+        }
+
+        .timeline-item .date {
+            display: inline-block;
+            color: #35aee2;
+            font-size: .85rem;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .timeline-item p {
+            margin: 0;
+            color: #64748b;
+            line-height: 1.65;
+        }
+
+        /* SKILLS */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 17px;
+        }
+
+        .skill {
+            padding: 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            background: #f8fafc;
+        }
+
+        .skill-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 9px;
+        }
+
+        .skill-name {
+            color: #1e293b;
+            font-weight: 700;
+        }
+
+        .skill-icon {
+            color: #35aee2;
+            margin-right: 7px;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skill-bar span {
+            display: block;
+            height: 100%;
+            background: linear-gradient(90deg, #2e4d82, #35aee2);
+            border-radius: 20px;
+        }
+
+        /* WHAT I DO */
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px;
+        }
+
+        .work-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 22px;
+            background: #f8fafc;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, .09);
+        }
+
+        .work-card i {
+            width: 46px;
+            height: 46px;
+            border-radius: 13px;
+            display: grid;
+            place-items: center;
+            background: #e8f5fc;
+            color: #35aee2;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .work-card h3 {
+            color: #1e293b;
+            margin: 0 0 8px;
+        }
+
+        .work-card p {
+            color: #64748b;
+            line-height: 1.6;
+            margin: 0;
+            font-size: .92rem;
+        }
+
+        /* CTA */
+        .about-cta {
+            text-align: center;
+            background: #2e4d82;
+            color: white;
+            border-radius: 22px;
+            padding: 38px 25px;
+            margin-top: 10px;
+        }
+
+        .about-cta h2 {
+            margin: 0 0 10px;
+            font-size: 1.8rem;
+        }
+
+        .about-cta p {
+            margin: 0 auto 20px;
+            max-width: 600px;
+            color: #dbeafe;
+            line-height: 1.6;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: #35aee2;
+            color: white;
+            text-decoration: none;
+            padding: 12px 23px;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: transform .2s, background .2s;
+        }
+
+        .contact-btn:hover {
+            background: #2298cb;
+            transform: translateY(-2px);
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+            #about-page {
+                padding: 130px 20px 55px;
+            }
+
+            .about-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .about-photo {
+                max-height: 330px;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .section-card,
+            .about-intro {
+                padding: 23px;
+                border-radius: 17px;
+            }
+
+            .quick-info,
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar-header">
+        <a href="index.html" class="brand-logo">
+            <span class="logo-icon">♢</span>
+            Amanuel Temesgen
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <main id="about-page">
+        <div class="about-container">
+
+            <!-- PAGE INTRO -->
+            <div class="section-heading">
+                <div class="tag">ABOUT ME • MY WORK</div>
+                <h1>Get to Know <span>Amanuel</span></h1>
+                <p>
+                    Welcome to my personal portfolio! This is the page where my skills,experience,and work are showed.
+                </p>
+            </div>
+
+            <!-- ABOUT ME -->
+            <section class="about-intro">
+                <div>
+                    <!-- Keep aman.png in the same folder as this HTML file -->
+                    <img class="about-photo" src="aman.png"
+                         alt="Amanuel Temesgen">
+                </div>
+
+                <div class="about-content">
+                    <h2>About Me</h2>
+
+                    <p>
+                        My name is <strong>Amanuel Temesgen</strong>. I am a
+                        a grade 9 student with a skill for both graphic design and web development.I have completed training in both fiels and i graduated in both of them.I have one year experience in both of them and I am continuing to improve my skills and confidences to enhance my abilities in the future.
+                    </p>
+
+                    <p>
+                        I have worked in both graphic design and web
+                        development, and I have completed training in these
+                        areas. I am continuing to improve my skills by
+                        practicing, creating projects, and learning new tools.
+                    </p>
+
+                    <div class="quick-info">
+                        <div class="info-box">
+                            <i class="fa-solid fa-palette"></i>
+                            <strong>Role</strong>
+                            <span>Graphic Designer</span>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-code"></i>
+                            <strong>Also</strong>
+                            <span>Web Developer</span>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <strong>Education</strong>
+                            <span>Grade 9</span>
+                        </div>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-clock"></i>
+                            <strong>Experience</strong>
+                            <span>1+ year</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE -->
+            <section class="section-card">
+                <h2>My Experience</h2>
+                <p>
+                    My experience combines creative design with web
+                    development, allowing me to work on both visual and
+                    digital projects.
+                </p>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <span class="date">GRAPHIC DESIGN</span>
+                        <h3>Graphic Design Projects</h3>
+                        <p>
+                            Creating logos, banners, promotional designs,
+                            business cards, and other visual materials using
+                            Adobe Families.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date">WEB DEVELOPMENT</span>
+                        <h3>Website Development</h3>
+                        <p>
+                            Building responsive and user-friendly websites
+                            with HTML, CSS, and JavaScript with a good understanding.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="date">MOTION & VIDEO</span>
+                        <h3>Video Editing</h3>
+                        <p>
+                            Working with Adobe Premiere Pro and After Effects
+                            for video editing, motion graphics, and creative
+                            visual content.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section class="section-card">
+                <h2>My Skills</h2>
+                <p>
+                    These are the main tools and skills I use in my creative
+                    and web-development work.
+                </p>
+
+                <div class="skills-grid">
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <span class="skill-name">
+                                <i class="fa-solid fa-pen-nib skill-icon"></i>
+                                Photoshop
+                            </span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar"><span style="width:90%"></span></div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <span class="skill-name">
+                                <i class="fa-solid fa-vector-square skill-icon"></i>
+                                Illustrator
+                            </span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar"><span style="width:85%"></span></div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <span class="skill-name">
+                                <i class="fa-solid fa-film skill-icon"></i>
+                                Premiere Pro
+                            </span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar"><span style="width:80%"></span></div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <span class="skill-name">
+                                <i class="fa-solid fa-wand-magic-sparkles skill-icon"></i>
+                                After Effects
+                            </span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar"><span style="width:75%"></span></div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <span class="skill-name">
+                                <i class="fa-brands fa-html5 skill-icon"></i>
+                                HTML
+                            </span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar"><span style="width:90%"></span></div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-top">
+                            <span class="skill-name">
+                                <i class="fa-brands fa-css3-alt skill-icon"></i>
+                                CSS
+                            </span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar"><span style="width:85%"></span></div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- WHAT I CAN DO -->
+            <section class="section-card">
+                <h2>What I Can Do</h2>
+                <p>
+                    I can combine design and technology to create useful and
+                    attractive digital experiences.
+                </p>
+
+                <div class="work-grid">
+
+                    <div class="work-card">
+                        <i class="fa-solid fa-pen-nib"></i>
+                        <h3>Graphic Design</h3>
+                        <p>
+                            Logos, banners, business cards, promotional
+                            graphics, and branding materials.
+                        </p>
+                    </div>
+
+                    <div class="work-card">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Web Development</h3>
+                        <p>
+                            Responsive, modern websites with clean layouts
+                            and user-friendly interfaces.
+                        </p>
+                    </div>
+
+                    <div class="work-card">
+                        <i class="fa-solid fa-video"></i>
+                        <h3>Motion & Video</h3>
+                        <p>
+                            Video editing, motion graphics, and creative
+                            visual content for personal or business use.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="about-cta">
+                <h2>Have a Project in Mind?</h2>
+                <p>
+                    If you would like to work with me, send me a message and
+                    tell me about your project.
+                </p>
+                <a class="contact-btn" href="contact.html">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Contact Me
+                </a>
+            </section>
+
+        </div>
+    </main>
+ <header class="navbar-header">
+        <a href="#home" class="brand-logo">
+            <span class="logo-icon"><img src="logo2.gif"
+            alt="logo"
+            width="50"
+            height="50"></span> Amanuel Temesgen
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanuel Temesgen</title>
+    <link rel="stylesheet" href="autocycle.css">
+    <link rel="shortcut icon" href="logo2.gif" type="image/jpg">
+    <style>
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #e7e8ec; color: #020202; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        
+        /* Main Layout matching the design structure exactly */
+        .portfolio-hero { display: flex; width: 100%; max-width: 1200px; align-items: center; justify-content: space-between; gap: 40px; }
+        .content-left { flex: 1.2; max-width: 650px; }
+        .visual-right { flex: 0.8; display: flex; justify-content: center; position: relative; }
+
+        /* Left side content styles */
+        .tag-badge { background-color: #eff0f4; color: #3ac0f5; font-size: 0.7rem; letter-spacing: 1px; font-weight: bold; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; margin-bottom: 25px; display: inline-block; }
+        
+        h1 { font-size: 3.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 15px; }
+        h1 span.name { color: #3ac0f5; }
+        
+        .sub-headline { font-size: 3.2rem; font-weight: 700; color: #0e0d0d; margin-bottom: 25px; }
+        .bio-text { color: #697386; font-size: 1.05rem; line-height: 1.6; margin-bottom: 35px; max-width: 520px; }
+        
+        /* Button setup (Single view button only) */
+        .btn { padding: 14px 28px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; text-decoration: none; display: inline-flex; align-items: center; transition: background 0.2s; background-color: #6d44f8; color: white; }
+        .btn:hover { background-color: #3ac0f5; }
+
+        /* Right side skyblue background circle layout */
+        .avatar-container { position: relative; width: 450px; height: 450px; display: flex; justify-content: center; align-items: center; }
+
+        .skyblue-glow { 
+            position: absolute; 
+            width: 400px; 
+            height: 400px; 
+            background: #28afdd; 
+            border-radius: 50%; 
+            opacity: 0.9;
+            .profile-background {
+  background: radial-gradient(circle, #00A8FF 70%, transparent 70%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+        }
+        .profile-img { position: relative; z-index: 2; width: 100%; height: auto; object-fit: contain; }
+        @media (max-width: 900px) {
+            .portfolio-hero { flex-direction: column; text-align: center; }
+            .bio-text { margin: 0 auto 35px auto; }
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-left: 100px;"font-family: Cambria;>
+<section class="portfolio-hero">
+        <div class="content-left">
+            <span class="tag-badge">I'm a Web Developer and Graphics Designer</span>
+            <h1>Hi, I'm <span class="name">Amanuel</span></h1>
+            <div class="sub-headline">I build Graphics Design and Websites</div>
+            <p class="bio-text">
+                My name is Amanuel Temesgen. My educational level is grade 9, and I worked on both Graphics Designer and Web developer. I have graduated by two of them and I have a one years experience.
+            </p>
+            <div>
+                <button type="button" onclick="openPage()"  class="btn">View My Work</button>
+                <script>
+                    function openPage(){
+                        window.location.href="about.html";
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="visual-right">
+            <div class="avatar-container">
+                <div class="skyblue-glow"></div>
+                <img src="aman.png" alt="Amanuel Temesgen" class="profile-img">
+            </div>
+        </div>
+    </section>
+    </section>
+    </div>
+    <header class="navbar-header">
+        <a href="#home" class="brand-logo">
+            <span class="logo-icon"><img src="logo2.gif"
+            alt="logo"
+            width="50"
+            height="50"></span> Amanuel Temesgen
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

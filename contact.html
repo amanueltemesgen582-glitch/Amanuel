@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanuel Temesgen</title>
+
+    <!-- Your existing site CSS -->
+    <link rel="stylesheet" href="autocycle.css">
+
+    <!-- Social icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* CONTACT PAGE */
+        #contact {
+            min-height: 100vh;
+            padding: 150px 7% 70px;
+            box-sizing: border-box;
+            background: #f8fafc;
+        }
+
+        .contact-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .contact-heading .small-title {
+            display: inline-block;
+            padding: 7px 15px;
+            border-radius: 8px;
+            background: #e8f5fc;
+            color: #35aee2;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .contact-heading h1 {
+            margin: 0 0 12px;
+            color: #111827;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+        }
+
+        .contact-heading h1 span {
+            color: #35aee2;
+        }
+
+        .contact-heading p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.25fr;
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .social-panel,
+        .form-panel {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 22px;
+            padding: 32px;
+            box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+        }
+
+        .social-panel h2,
+        .form-panel h2 {
+            margin: 0 0 10px;
+            color: #173c70;
+            font-size: 1.45rem;
+        }
+
+        .panel-description {
+            color: #64748b;
+            line-height: 1.65;
+            margin: 0 0 25px;
+        }
+
+        .social-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px 17px;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            text-decoration: none;
+            color: #1e293b;
+            background: #ffffff;
+            transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(15, 23, 42, .10);
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 13px;
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .facebook .social-icon { background: #1877f2; }
+        .instagram .social-icon {
+            background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af);
+        }
+        .telegram .social-icon { background: #229ed9; }
+
+        .social-text strong {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+
+        .social-text span {
+            color: #64748b;
+            font-size: .9rem;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+        }
+
+        .field label {
+            display: block;
+            margin-bottom: 7px;
+            color: #1e293b;
+            font-weight: 600;
+            font-size: .93rem;
+        }
+
+        .field input,
+        .field textarea {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #d7dee8;
+            border-radius: 12px;
+            padding: 13px 14px;
+            font: inherit;
+            color: #1e293b;
+            background: #f8fafc;
+            outline: none;
+            transition: border-color .2s, box-shadow .2s, background .2s;
+        }
+
+        .field input {
+            height: 49px;
+        }
+
+        .field textarea {
+            min-height: 145px;
+            resize: vertical;
+        }
+
+        .field input:focus,
+        .field textarea:focus {
+            background: #ffffff;
+            border-color: #35aee2;
+            box-shadow: 0 0 0 3px rgba(53, 174, 226, .14);
+        }
+
+        .send-button {
+            border: 0;
+            border-radius: 12px;
+            padding: 14px 22px;
+            background: #2e4d82;
+            color: #ffffff;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+        }
+
+        .send-button:hover {
+            background: #35aee2;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(46, 77, 130, .20);
+        }
+
+        .send-note {
+            margin: 0;
+            color: #94a3b8;
+            font-size: .82rem;
+        }
+
+        @media (max-width: 800px) {
+            #contact {
+                padding: 130px 20px 55px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-panel,
+            .form-panel {
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-heading h1 {
+                font-size: 2.2rem;
+            }
+
+            .social-panel,
+            .form-panel {
+                border-radius: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SAME NAVIGATION STYLE AS YOUR OTHER PAGES -->
+    <header class="navbar-header">
+        <a href="index.html" class="brand-logo">
+            <span class="logo-icon">♢</span>
+            Amanuel Temesgen
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <main id="contact">
+        <div class="contact-wrapper">
+
+            <div class="contact-heading">
+                <div class="small-title">LET'S WORK TOGETHER</div>
+                <h1>Contact <span>Me</span></h1>
+                <p>
+                    Have a project, question, or idea? Send me a message or
+                    contact me directly through my social media accounts.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+
+                <!-- SOCIAL MEDIA -->
+                <section class="social-panel">
+                    <h2>Connect With Me</h2>
+                    <p class="panel-description">
+                        You can contact me directly through any of these social
+                        media platforms.
+                    </p>
+
+                    <div class="social-list">
+
+                        <a class="social-link facebook"
+                           href="https://www.facebook.com/amanprof582"
+                           target="_blank" rel="noopener noreferrer">
+                            <div class="social-icon">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="social-text">
+                                <strong>Facebook</strong>
+                                <span>amanprof582</span>
+                            </div>
+                        </a>
+
+                        <a class="social-link instagram"
+                           href="https://www.instagram.com/amanprof582/"
+                           target="_blank" rel="noopener noreferrer">
+                            <div class="social-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="social-text">
+                                <strong>Instagram</strong>
+                                <span>@amanprof582</span>
+                            </div>
+                        </a>
+
+                        <a class="social-link telegram"
+                           href="https://t.me/amanteme2356"
+                           target="_blank" rel="noopener noreferrer">
+                            <div class="social-icon">
+                                <i class="fa-brands fa-telegram"></i>
+                            </div>
+                            <div class="social-text">
+                                <strong>Telegram</strong>
+                                <span>@amanteme2356</span>
+                            </div>
+                        </a>
+
+                    </div>
+                </section>
+
+                <!-- CONTACT FORM -->
+                <section class="form-panel">
+                    <h2>Send Me a Message</h2>
+                    <p class="panel-description">
+                        Fill in the form below and I will receive your message.
+                    </p>
+
+                    <form class="contact-form"
+                          action="https://formspree.io/f/mbglvbzb"
+                          method="POST">
+
+                        <div class="field">
+                            <label for="name">Your Name</label>
+                            <input id="name" name="name" type="text"
+                                   placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email Address</label>
+                            <input id="email" name="email" type="email"
+                                   placeholder="Enter your email address" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Description / Message</label>
+                            <textarea id="message" name="message"
+                                      placeholder="Write your message here..."
+                                      required></textarea>
+                        </div>
+
+                        <input type="hidden" name="_subject"
+                               value="New Contact Message - Amanuel Temesgen">
+
+                        <button class="send-button" type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            &nbsp; Send Message
+                        </button>
+
+                        <p class="send-note">
+                            Your message will be submitted securely through Formspree.
+                        </p>
+                    </form>
+                </section>
+
+            </div>
+        </div>
+    </main>
+ <header class="navbar-header">
+        <a href="#home" class="brand-logo">
+            <span class="logo-icon"><img src="logo2.gif"
+            alt="logo"
+            width="50"
+            height="50"></span> Amanuel Temesgen
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+</body>
+</html>
